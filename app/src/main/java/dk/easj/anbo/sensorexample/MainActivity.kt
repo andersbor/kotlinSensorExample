@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
         proximitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY)
         accelerationSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+
+        val allSensors = sensorManager.getSensorList(Sensor.TYPE_ALL)
+        Log.d("ALL SENSORS", allSensors.toString())
     }
 
     override fun onResume() {
@@ -63,13 +66,13 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
                     val y = event.values[1]
                     val z = event.values[2]
                     binding.sensorView3.text = "$sensorName Acceleration $x $y $z"
-                    Log.d("APPLE", "Acceleration: $x $y $z")
+                    //Log.d("APPLE", "Acceleration: $x $y $z")
                 }
             }
         }
     }
 
-    override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
+    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
         Log.d("APPLE", "onAccuracyChanged")
     }
 

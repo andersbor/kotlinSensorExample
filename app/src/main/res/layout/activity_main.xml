@@ -10,19 +10,21 @@
         android:id="@+id/sensorView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Sensor 1"
         android:textSize="30sp" />
 
     <TextView
         android:id="@+id/sensorView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="some text"
+        android:text="Sensor 2"
         android:textSize="30sp" />
 
     <TextView
         android:id="@+id/sensorView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Sensor 3"
         android:textSize="30sp" />
 
 </LinearLayout>
